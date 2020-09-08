@@ -9,6 +9,7 @@ public class Homework6CityCoordinates {
     b) The middle point between 2 cities
      */
     public static void main(String[] args) {
+        //Initialize known values
         int latitude1;
         int longitude1;
         int latitude2;
@@ -38,7 +39,7 @@ public class Homework6CityCoordinates {
                         //Calculate and get destination
                         int d1 = (int) Math.pow((latitude1 - latitude2), 2);
                         int d2 = (int) Math.pow((longitude1 - longitude2), 2);
-                        destination = (int) Math.pow((d1 + d2), 0.5);
+                        destination = (int) Math.sqrt(d1 + d2);
                         System.out.println("The distance between two cities is " + destination);
                         //Calculate and get middle point
                         latitude3 = (latitude1 + latitude2) / 2;

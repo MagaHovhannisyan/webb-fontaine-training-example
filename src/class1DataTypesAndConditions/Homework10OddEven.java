@@ -11,7 +11,7 @@ public class Homework10OddEven {
     public static void main(String[] args) {
         //Initialize known values
         int number;
-        String message = "hi";
+        String message;
 
         //Get unknown values and output
         System.out.println("Please enter your number");

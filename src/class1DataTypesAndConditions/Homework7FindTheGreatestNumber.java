@@ -26,10 +26,8 @@ public class Homework7FindTheGreatestNumber {
                     scanner.close();
                     if (firstNumber > secondNumber && firstNumber > thirdNumber) {
                         System.out.println(firstNumber);
-                    } else if (secondNumber > firstNumber && secondNumber > thirdNumber) {
-                        System.out.println(secondNumber);
                     } else {
-                        System.out.println(thirdNumber);
+                        System.out.println(Math.max(secondNumber,thirdNumber));
                     }
                     //Error messages
                 } else {

@@ -8,10 +8,8 @@ public class Homework5Calculator {
      */
     public static void main(String[] args) {
         //Initialize known values
-        int result = 0; //QUESTION: Would like to know the logic when I need to initialize the variable when not
         int firstNumber;
         int secondNumber;
-        char mathOperation = '*';
 
         //Get unknown values and result
         System.out.println("Please enter your first number");
@@ -22,9 +20,9 @@ public class Homework5Calculator {
             if (scanner.hasNextInt()) {
                 secondNumber = scanner.nextInt();
                 System.out.println("Please enter the math operation");
-                mathOperation = scanner.next().charAt(0);
+                char mathOperation = scanner.next().charAt(0);
                 scanner.close();
-                scanner.close();
+                int result;
                 switch (mathOperation) {
                     case '+':
                         result = firstNumber + secondNumber;
@@ -36,8 +34,13 @@ public class Homework5Calculator {
                         result = firstNumber * secondNumber;
                         break;
                     case '/':
-                        result = firstNumber / secondNumber;
-                        break;
+                        if (secondNumber == 0) {
+                            System.out.println("You cannot divide number by zero");
+                            return;
+                        } else {
+                            result = firstNumber / secondNumber;
+                            break;
+                        }
                     default:
                         System.out.println("Please enter one of following math operations : + - * /");
                         return;

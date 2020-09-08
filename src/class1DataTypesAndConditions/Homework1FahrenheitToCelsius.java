@@ -8,7 +8,6 @@ public class Homework1FahrenheitToCelsius {
      */
     public static void main(String[] args) {
         //Initialize known values
-        float celsius;
         float fahrenheit;
 
         //Get unknown values
@@ -19,7 +18,7 @@ public class Homework1FahrenheitToCelsius {
         if (scanner.hasNextFloat()) {
             fahrenheit = scanner.nextFloat();
             scanner.close();
-            celsius = (fahrenheit - 32) * 5 / 9;
+            float celsius = (fahrenheit - 32) * 5 / 9;
             System.out.println("Today's temperature is " + celsius + " in Celsius");
         } else {
             //Get error message when entering with wrong format
