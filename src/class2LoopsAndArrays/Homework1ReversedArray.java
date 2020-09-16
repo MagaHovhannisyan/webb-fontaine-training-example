@@ -35,14 +35,13 @@ public class Homework1ReversedArray {
         //Printout the Original Array
         System.out.println("The Original Array: " + Arrays.toString(originalArray));
         //3. Reverse created Original Array
-        for (int i = 0; i < originalArray.length; i++) {
-            int[] reversedArray = new int[arrayLength];
-            for (int a = reversedArray.length - 1; a >= 0; a--) {
-                reversedArray[a] = originalArray[i];
-                i = i + 1;
-            }
-            //Printout the Reversed Array
-            System.out.println("The Reversed Array: " + Arrays.toString(reversedArray));
+        int[] reversedArray = new int[arrayLength];
+        int j = reversedArray.length;
+        for (int anInputArray : originalArray) {
+            reversedArray[j - 1] = anInputArray;
+            j -= 1;
         }
+        //Printout the Reversed Array
+        System.out.println("The Reversed Array: " + Arrays.toString(reversedArray));
     }
 }
