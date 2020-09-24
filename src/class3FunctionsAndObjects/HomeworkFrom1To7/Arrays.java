@@ -1,10 +1,10 @@
 package class3FunctionsAndObjects.HomeworkFrom1To7;
 
 import java.util.Scanner;
-
+//Utility Class, also known as Helper class, is a class, which contains just static methods.
 public class Arrays {
     //Get Array Length - output - positive integer number
-    int getArrayLength() {
+    static int getArrayLength() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the length of Array");
         //Error message when entering non integer value as array length
@@ -27,7 +27,7 @@ public class Arrays {
     }
 
     //Create Random one-dimensional Array - output - array with provided length and random element values
-    int[] createRandomArray(int arrayLength) {
+    static int[] createRandomArray(int arrayLength) {
         //1. Create  Array
         int[] array = new int[arrayLength];
         //2. Input random element values
@@ -38,7 +38,7 @@ public class Arrays {
     }
 
     //Create one-dimensional Array - output - array with provided length and provided element values
-    int[] createArray(int arrayLength) {
+    static int[] createArray(int arrayLength) {
         Scanner scanner = new Scanner(System.in);
         //1. Create  Array
         int[] array = new int[arrayLength];
@@ -56,7 +56,7 @@ public class Arrays {
     }
 
     //Create one Array by combining the elements of provided two Arrays
-    int[] combineTwoArrays(int[] firstArray, int[] secondArray) {
+    static int[] combineTwoArrays(int[] firstArray, int[] secondArray) {
         //Define the length of combined Array
         int totalLength = firstArray.length + secondArray.length;
         //Create new Array
@@ -73,7 +73,7 @@ public class Arrays {
     }
 
     //Create Array with doubled elements - gets an Array and doubles its elements
-    int[] getDoubledArray(int[] array) {
+    static int[] getDoubledArray(int[] array) {
         int[] doubledArray = new int[array.length];
         for (int i = 0; i < array.length; ++i) {
             doubledArray[i] = array[i] * 2;
@@ -82,7 +82,7 @@ public class Arrays {
     }
 
     //Print Array element - output - print of elements of provided one-dimensional Array
-    void arrayElementPrintout(int[] array, String message) {
+    static void arrayElementPrintout(int[] array, String message) {
         System.out.println("Please find the " + message + " bellow:");
         for (int i : array) {
             System.out.print(i + ", ");
@@ -91,7 +91,7 @@ public class Arrays {
     }
 
     //Calculate the mean of provided Array element values
-    double mean(int[] array, int arrayLength) {
+    static double mean(int[] array, int arrayLength) {
         int sum = 0;
         for (int i = 0; i < arrayLength; i++) {
             //2. Calculate sum of array element values
@@ -102,7 +102,7 @@ public class Arrays {
     }
 
     //Get index of given Array Element
-    int findIndex(int[] array) {
+    static int findIndex(int[] array) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the index of Element");
         //Error message when entering non integer value
@@ -125,7 +125,7 @@ public class Arrays {
     }
 
     //Increase the value of provided index by increase value
-    int increaseElementValue(int[] array, int index, float increaseValue) {
+    static int increaseElementValue(int[] array, int index, float increaseValue) {
         array[index] = (int) (array[index] * increaseValue);
         return array[index];
     }
