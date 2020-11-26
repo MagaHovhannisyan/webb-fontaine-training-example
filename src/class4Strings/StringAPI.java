@@ -65,29 +65,30 @@ public class StringAPI {
 
     //CHECK IF STRING IS PALINDROME
     static void checkIfPalindrome(String getString) {
-        for (int i = 0, j = getString.length() - 1; i < getString.length(); ++i, --j) {
-            if (getString.charAt(i) != getString.charAt(j)) {
-                System.out.println("Not Palindrome");
-                return;
-            }
-        }
-        System.out.println("Palindrome");
+        if (getString.equals(new StringBuilder(getString).reverse().toString())) {
+            //COMMENT Other possible solution with logic, however the above solution is easier
+//        for (int i = 0, j = getString.length() - 1; i < getString.length(); ++i, --j) {
+//            if (getString.charAt(i) != getString.charAt(j)) {
+//                System.out.println("Not Palindrome");
+//                return;
+//            }
+//        }
+            System.out.println("Palindrome");
+        } else System.out.println("Not Palindrome");
+
     }
 
     //CHECK IF OPENING AND CLOSING PARANTHESIS ARE EQUAL
     static void getParenthesis(String getString) {
+        int open = 0, close = 0;
         for (int i = 0; i < getString.length(); ++i) {
             //Error message when entering non parenthesis
             if (getString.charAt(i) != '(' && getString.charAt(i) != ')') {
                 System.out.println("You are allowed to enter only parenthesis");
                 return;
             }
-        }
-        int open = 0;
-        int close = 0;
-        //Count opening and closing parenthesis
-        for (int i = 0; i < getString.length(); ++i) {
-            if (getString.charAt(i) == '(') {
+            //Count opening and closing parenthesis
+            else if (getString.charAt(i) == '(') {
                 open++;
             } else {
                 close++;
@@ -129,17 +130,30 @@ public class StringAPI {
 
     //REMOVE DUPLICATE CHARACTERS
     static void removeDuplicates(String word) {
-        String result = "";
-        for (int i = 0; i < word.length(); i++) {
-            if (i + 1 < word.length() && word.charAt(i) != word.charAt(i + 1)) {
-                result = result + word.charAt(i);
-            }
-            if (i + 1 == word.length()) {
-                result = result + word.charAt(i);
+        char charArray[] = word.toCharArray();
+        boolean[] found = new boolean[256];
+        StringBuilder resultStringBuilder = new StringBuilder();
+        for (char c : charArray) {
+            if (!found[c]) {
+                found[c] = true;
+                resultStringBuilder.append(c);
             }
         }
-        System.out.println("Without duplicates : " + result);
+        System.out.println("String after duplicates removed : " +resultStringBuilder.toString());;
     }
+
+    //COMMENT Another possible solution, however the above solution is easier
+//        String result = "";
+//        for (int i = 0; i < word.length(); i++) {
+//            if (i + 1 < word.length() && word.charAt(i) != word.charAt(i + 1)) {
+//                result = result + word.charAt(i);
+//            }
+//            if (i + 1 == word.length()) {
+//                result = result + word.charAt(i);
+//            }
+//        }
+//        System.out.println("Without duplicates : " + result);
+//    }
 
     // DIVIDE STRING TO EQUAL PARTS
     static void divideStringToEqalParts(String word, int number) {
