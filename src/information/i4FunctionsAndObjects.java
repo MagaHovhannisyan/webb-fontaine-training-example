@@ -1,6 +1,6 @@
-package class3FunctionsAndObjects;
+package information;
 
-public class InformationFunctionsAndObjects {
+public class i4FunctionsAndObjects {
     //Naming styles - camelCase (function), PascalCase (class), snake_case, kabeb-case
 
     /*
@@ -9,9 +9,11 @@ public class InformationFunctionsAndObjects {
      */
 
     /*
-    BREAK statement - results in the termination of the loop, it will come out of the loop and stops further iterations.
+    BREAK statement - results in the termination of the loop (cycle), it will come out of the loop and stop further iterations.
     CONTINUE statement - stops the current execution of the iteration and proceeds to the next iteration.
-    RETURN statement - takes you out of the method. It stops executing the method and returns from the method execution.
+    RETURN statement - takes you out of the method (function). It stops executing the method and returns from the method execution.
+    if we have an ordinary for loop, break and return statements will lead to the same solution, while
+    when having function with multiple loops, Break will take out of loop but continue to run the function, while Return will stop the entire function.
      */
     void exampleContinue() {     //Output - numbers from 0 to 9 except of
         int i = 0;

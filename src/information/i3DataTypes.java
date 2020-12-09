@@ -1,6 +1,6 @@
-package class1DataTypesAndConditions;
+package information;
 
-public class InformationDataTypes {
+public  class i3DataTypes {
     public static void main(String[] args) {
         /* MAIN DIFFERENCES BETWEEN PRIMITIVE AND NON-PRIMITIVE DATA TYPES
          * Primitive types are predefined in Java. Non-primitive types are created by the programmer (except for String);
