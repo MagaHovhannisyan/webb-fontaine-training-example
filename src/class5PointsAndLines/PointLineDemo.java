@@ -15,13 +15,14 @@ public class PointLineDemo {
          */
         System.out.println("1. Here is the distance between the two points : ");
         Line line = new Line(point1, point2);
-        Line.getLength();
+        double length = line.getLength();
 
         /*
          * 2. Calculate the middle point between of two points.
          */
         System.out.println("2. Here is the middle point between the two points : ");
-        API.middlePoint(point1, point2);
+        API api = new API();
+        Point point = api.middlePoint(point1, point2);
 
         /*
          * 3. Find out if given point belongs to the square.

@@ -1,10 +1,10 @@
 package class5PointsAndLines;
 
 public class API {
-    private static double middleA;
-    private static double middleB;
+    private double middleA;
+    private double middleB;
 
-    public static Point middlePoint(Point a, Point b) {
+    public Point middlePoint(Point a, Point b) {
         if (a == null || b == null || a.equals(b)) {
             System.out.println("Cannot make calculations with the same point");
             return null;

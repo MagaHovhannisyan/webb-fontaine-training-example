@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 public class Line {
     private Point a;
     private Point b;
-    private static double length;
+    private double length;
 
     static DecimalFormat myFormat = new DecimalFormat("0.00");
 
@@ -43,7 +43,7 @@ public class Line {
         this.b = b;
     }
 
-    public static double getLength() {
+    public double getLength() {
         System.out.println("Length " + myFormat.format(length));
         return length;
     }
