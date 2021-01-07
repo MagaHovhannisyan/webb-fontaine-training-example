@@ -1,6 +1,6 @@
 package information;
 
-public class i1Git {
+public class Git {
     /*
     BASIC GIT COMMANDS:
     -add ($ git add) - adding the file to your local repository. Unless the add command is performed, file has ?? status

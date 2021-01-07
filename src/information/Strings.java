@@ -1,6 +1,6 @@
 package information;
 
-public class i2Strings {
+public class Strings {
     //immutable - it cannot be changed. Whenever we change any String, a new instance is created
     /*
     String - an object that represents sequence of char values

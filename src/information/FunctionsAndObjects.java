@@ -1,6 +1,6 @@
 package information;
 
-public class i4FunctionsAndObjects {
+public class FunctionsAndObjects {
     //Naming styles - camelCase (function), PascalCase (class), snake_case, kabeb-case
 
     /*
