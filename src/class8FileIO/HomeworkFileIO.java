@@ -13,7 +13,19 @@ import java.util.List;
 import static class8FileIO.ErrorMessages.*;
 
 public class HomeworkFileIO {
-    String[] fileList;
+    private String[] fileList;
+
+    HomeworkFileIO(String[] fileList) {
+        setFileList(fileList);
+    }
+
+    public String[] getFileList() {
+        return fileList;
+    }
+
+    public void setFileList(String[] fileList) {
+        this.fileList = fileList;
+    }
 
     // 1. Write a Java program to get a list of all file/directory names from the given directory.
     public String getAllFileNames(String directory) throws FileNotFoundException {
@@ -22,13 +34,13 @@ public class HomeworkFileIO {
         // 3. Write a Java program to check if a file or directory specified by pathname exists or not.
         if (file.exists()) {
             fileList = file.list();
-            if (fileList.length == 0) {
+            if (getFileList().length == 0) {
                 throw new FileNotFoundException(NO_FILE_IN_DIRECTORY.getValue());
             }
         } else {
             throw new FileNotFoundException(INVALID_FILE_PATH.getValue());
         }
-        return Arrays.toString(fileList);
+        return Arrays.toString(getFileList());
     }
 
     // 2. Write a Java program to get specific files by extensions from a specified directory.
@@ -36,7 +48,7 @@ public class HomeworkFileIO {
         int i = 0;
         List<String> list = new ArrayList<String>();
         getAllFileNames(directory);
-        for (i = 0; i < fileList.length; ++i) {
+        for (i = 0; i < getFileList().length; ++i) {
             if (fileList[i].endsWith(extension)) {
                 list.add(fileList[i]);
             }

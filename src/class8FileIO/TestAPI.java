@@ -1,13 +1,21 @@
 package class8FileIO;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class TestAPI {
-    HomeworkFileIO homework = new HomeworkFileIO();
+    private HomeworkFileIO homework;
+    private String[] fileList;
+
+    @BeforeClass
+    public void setup() {
+        homework = new HomeworkFileIO(fileList);
+    }
 
     /*
     1. Write a Java program to get a list of all file/directory names from the given directory.
