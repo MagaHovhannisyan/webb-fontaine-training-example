@@ -6,9 +6,9 @@ public class Inheritance {
 
     /*
     A subclass inherits its superclasses:
-    * public members
-    * default / package private members (if the subclass and superclass are located in the same package)
-    * protected members (regardless of the location of packages of classes)
+    * public members,
+    * default / package private members (if the subclass and superclass are located in the same package),
+    * protected members (regardless of the location of packages of classes).
      */
 
     /*
@@ -17,4 +17,33 @@ public class Inheritance {
      */
 
     // OVERRIDING - allows a subclass to inherit a method from a superclass and then to modify its behavior as needed.
+
+    //SUPER Keyword - used to access any data member or methods of the parent class.
+
+    /*
+     * CONSTRUCTORS during inheritance - constructor of superclass with no argument gets automatically called in subclass constructor.
+     * If we want to call parameterized constructor of superclass, then we can call it using super().
+     * superclass constructor call must be the first line in subclass constructor.
+     */
+
+    class Base {
+        int x;
+
+        Base(int _x) {
+            x = _x;
+        }
+    }
+
+    class Derived extends Base {
+        int y;
+
+        Derived(int _x, int _y) {
+            super(_x);
+            y = _y;
+        }
+
+        void Display() {
+            System.out.println("x = " + x + ", y = " + y);
+        }
+    }
 }
